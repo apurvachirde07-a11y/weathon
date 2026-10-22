@@ -1,0 +1,29 @@
+Python Lists
+A list is an ordered collection of items written in square brackets. Indexing starts at 0. The last valid index is len(list) - 1. Accessing an index outside the range raises an IndexError: list index out of range. Use append() to add an item, remove() to delete an item, and sort() to sort the list. Slicing like my_list[1:3] returns a new list.
+
+Python For Loops
+The range(n) function generates numbers from 0 to n-1. To loop over a list safely use: for item in my_list. Using range(len(my_list)+1) causes IndexError because the last index is len(my_list)-1. Use enumerate(my_list) when you need both the index and the value. The break statement exits a loop early and continue skips to the next iteration.
+
+Python While Loops
+A while loop repeats as long as its condition is True. If the condition never becomes False, the loop runs forever, which is called an infinite loop. Always update the loop variable inside the loop, for example i += 1. Forgetting to update the variable is a common cause of infinite loops.
+
+Python Dictionaries
+A dictionary stores key-value pairs inside curly braces. Accessing a missing key with dict[key] raises KeyError. Use dict.get(key, default) to avoid KeyError. Use dict.items() to loop over keys and values together. Keys must be unique and immutable, such as strings or numbers.
+
+Python Functions
+Functions are defined with the def keyword. A function without a return statement returns None. Parameters are the names in the definition and arguments are the values passed in. Calling a function with the wrong number of arguments raises TypeError. Default values can be given like def greet(name="friend").
+
+Python Strings
+Strings are immutable sequences of characters. Trying to change a character like s[0] = "A" raises TypeError: str object does not support item assignment. Use f-strings like f"Hello {name}" to format text. Useful methods are upper(), lower(), strip(), split() and replace(). Joining a number with a string using + raises TypeError, so convert it first using str().
+
+Python Exceptions
+Errors can be handled with try and except blocks. Code that may fail goes inside try, and the except block runs if an error occurs. Use except ZeroDivisionError to catch division by zero. The finally block always runs. Common exceptions are ValueError, TypeError, KeyError, IndexError and NameError.
+
+Python Variables and Scope
+A variable used before it is defined raises NameError. Variables created inside a function are local and cannot be used outside it. Use the global keyword to modify a global variable inside a function. Indentation defines code blocks in Python, and wrong indentation raises IndentationError.
+
+Python File Handling
+Use open("file.txt", "r") to read a file. The with statement closes the file automatically: with open("file.txt") as f. Opening a file that does not exist raises FileNotFoundError. Mode "w" overwrites a file and mode "a" appends to it. The read() method returns the whole content as a string.
+
+Python Classes and Objects
+A class is a blueprint for objects and is defined with the class keyword. The __init__ method runs when an object is created and sets its attributes. The first parameter of every method is self, and forgetting it raises TypeError. Inheritance lets a
